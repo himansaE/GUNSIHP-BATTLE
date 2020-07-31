@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GUNSHIP BATTLE</title>
+    <link rel="icon" href="data/icon.png" />
+    <style>
+      @font-face {
+        font-family: EvilEmpire-4BBVK;
+        src: url(/web/font/EvilEmpire-4BBVK.ttf);
+      }
+
+      body {
+        margin: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.67);
+        position: fixed;
+        background-image: url("data/wallpaper.jpg");
+        background-repeat: no-repeat;
+        background-size: auto;
+      }
+
+      #con {
+        height: 100vh;
+        width: 100vw;
+        max-width: 500px;
+        background-color: rgba(0, 0, 0, 0);
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%);
+      }
+
+      .button {
+        position: absolute;
+        top: calc(50% + 11vh);
+        color: black;
+        font-size: 33px;
+        display: none;
+        background-color: #d81634;
+        padding: 4px 22px;
+        left: 50%;
+        font-family: cursive;
+        transform: translate(-50%);
+        text-transform: capitalize;
+        cursor: default;
+        user-select: none;
+      }
+
+      canvas {
+        cursor: none;
+      }
+
+      .pause canvas {
+        cursor: default;
+      }
+
+      .pause .button {
+        display: block;
+      }
+      .head {
+        display: none;
+        color: rgb(0 0 0 / 70%);
+        font-size: 66px;
+        position: fixed;
+        z-index: 12;
+        font-family: EvilEmpire-4BBVK;
+        top: calc(0% + 8vh);
+        min-width: 100%;
+        text-align: center;
+      }
+      .pause .head {
+        display: block;
+      }
+    </style>
+    <script defer src="app.js"></script>
+  </head>
+
+  <body>
+    <div id="con" class="pause">
+      <canvas></canvas>
+      <div class="head">GUNSHIP BATTLE</div>
+      <div id="button" class="button">play</div>
+    </div>
+  </body>
+</html>
